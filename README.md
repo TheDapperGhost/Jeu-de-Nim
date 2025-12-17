@@ -1,2 +1,3 @@
 # Jeu-de-Nim
-Prohet n°1 pour la classe ne NSI en première
+
+Projet n°1 pour la classe de NSI en première
