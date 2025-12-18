@@ -5,10 +5,14 @@ def clear():
 
 def partie(nb_joueur : int, nb_allumettes : int, plateau : list) -> list:
     
-    #return plateau
+    return plateau
 
 def generer_plateau(nb_allumettes : int) -> list[str]:
     plateau : list = []
     for i in range(nb_allumettes):
         plateau += "|"
     return plateau
+
+
+nb_allumettes : int = int(input("Combien d'allumettes voulez-vous ?\n"))
+generer_plateau(nb_allumettes)
