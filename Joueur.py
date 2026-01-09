@@ -1,5 +1,6 @@
-def jouer_coup() -> aae:
+def jouer_coup() -> int:
     """Demande au joueur de jouer son coup"""
+    return aae
     pass
 
 

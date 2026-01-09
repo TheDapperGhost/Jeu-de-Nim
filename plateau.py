@@ -1,9 +1,12 @@
+import os
+
 def clear() -> None:
     os.system("cls" if os.name in ("nt", "dos") else "clear")
 
 
-def generer_partie() -> NbrAllumettes:
+def generer_partie() -> int:
     """Génère une nouvelle partie"""
+    return NbrAllumettes
     pass
 
 
