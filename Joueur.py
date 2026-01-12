@@ -6,6 +6,7 @@ def jouer_coup() -> int:
 
 def valider_coup(aae: int) -> bool:
     """Vérifie si le coup joué est valide"""
+    return valid
     pass
 
 
