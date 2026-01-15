@@ -1,6 +1,11 @@
 import os
 import plateau
 import joueur
+import mp3play
+
+url = "./canard.mp3"
+clip = mp3play.load(url)
+clip.play()
 
 def clear() -> None:
     os.system("cls" if os.name in ("nt", "dos") else "clear")
