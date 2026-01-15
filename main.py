@@ -12,22 +12,7 @@ def clear() -> None:
 
 clear()
 
-NbrAllumettes = plateau.generer_partie()
-plateau.afficher_plateau(NbrAllumettes , 0)
-aae = joueur.jouer_coup
-if joueur.tester_victoire(aae) == True:
-    NbrAllumettes = NbrAllumettes - aae
-else:
-    print("joueur ", str(not joueur), " a gagné")
-    réponse = ""
-    while réponse != "oui":
-        réponse = input("Rejouer? ")
-
-
-#plateau.generer_partie()
-#joueur1 = True
-
-#while not joueur.tester_victoire():
+#while not joueur.tester_victoire(NbrAllumettes, aae):
 #    aae : int = int(input("Combien d'allumettes voulez-vous enlever (entre 1 et 3) ? : "))
 #    joueur.jouer_coup(joueur, aae)
-#    joueur1 = not joueur1
+#    joueur1 : bool = not joueur1
