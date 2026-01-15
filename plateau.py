@@ -1,4 +1,3 @@
-import os
 from main import clear
 
 

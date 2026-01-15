@@ -11,7 +11,7 @@ def jouer_coup(joueur : bool) -> int:
 
 def valider_coup(aae: int) -> bool:
     """Vérifie si le coup joué est valide"""
-    return <=0 aae <=3
+    return  0 <= aae <=3
     
 
 
