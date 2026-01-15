@@ -1,8 +1,8 @@
 #aae : allumettes à enlever
-def jouer_coup(joueur : bool) -> int:
+def jouer_coup() -> int:
     """Demande au joueur de jouer son coup"""
     aae : int = int(input("Combien d'allumettes voulez-vous enlever (entre 1 et 3) ? : "))
-    while valider_coup() is False:
+    while valider_coup(aae) is False:
         print("Entrez un nombre valide d'allumettes !")
         aae : int = int(input("Combien d'allumettes voulez-vous enlever (entre 1 et 3) ? : "))
     return aae

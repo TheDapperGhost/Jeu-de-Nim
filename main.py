@@ -10,19 +10,28 @@ clip.play()
 
 def clear() -> None:
     os.system("cls" if os.name in ("nt", "dos") else "clear")
-
+    pass
 clear()
 
-NbrAllumettes = plateau.generer_partie()
-plateau.afficher_plateau(NbrAllumettes , 0)
-aae = joueur.jouer_coup
-if joueur.tester_victoire(aae) == True:
-    NbrAllumettes = NbrAllumettes - aae
-else:
+def nouvelle_partie() -> None:
+    """Lance une nouvelle partie"""
+    ae = 0
+    NbrAllumettes = plateau.generer_partie()
+    plateau.afficher_plateau(NbrAllumettes , 0)
+    aae = joueur.jouer_coup()
+    ae = ae + aae
+    while joueur.tester_victoire(NbrAllumettes, aae) != True:
+        NbrAllumettes = NbrAllumettes - aae
+        plateau.afficher_plateau(NbrAllumettes , ae)
+        aae = joueur.jouer_coup()
+        ae = ae + aae
+
     print("joueur ", str(not joueur), " a gagné")
     réponse = ""
     while réponse != "oui":
         réponse = input("Rejouer? ")
+    nouvelle_partie()
+nouvelle_partie()
 
 
 #plateau.generer_partie()
