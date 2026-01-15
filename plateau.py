@@ -1,8 +1,5 @@
 import os
-
-def clear() -> None:
-    os.system("cls" if os.name in ("nt", "dos") else "clear")
-
+from main import clear
 
 def generer_partie() -> int:
     """Génère une nouvelle partie"""

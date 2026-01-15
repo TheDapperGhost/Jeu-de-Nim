@@ -1,6 +1,9 @@
 import plateau
 import joueur
 
+def clear() -> None:
+    os.system("cls" if os.name in ("nt", "dos") else "clear")
+
 plateau.generer_partie()
 
 while not joueur.tester_victoire():
