@@ -9,6 +9,8 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    permissions:
+      contents: write
 
     steps:
     - uses: actions/checkout@v4
@@ -42,12 +44,12 @@ jobs:
 
     - name: Create/Update Release
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-      uses: softprops/action-gh-release@v1
+      uses: ncipollo/release-action@v1
       with:
-        files: dist/*.exe
-        tag_name: latest
+        artifacts: "dist/*.exe"
+        tag: latest
         name: Latest Build
         body: "Dernière version compilée de Jeu de Nim"
-        make_latest: true
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        makeLatest: true
+        allowUpdates: true
+        token: ${{ secrets.GITHUB_TOKEN }}
