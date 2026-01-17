@@ -21,11 +21,16 @@ def nouvelle_partie() -> None:
         ae = ae + aae
 
     print("joueur ", str(not joueur), " a gagné")
-    réponse = ""
-    while réponse != "oui":
-        réponse = input("Rejouer? ")
-    nouvelle_partie()
+
 nouvelle_partie()
+
+réponse = input("Rejouer ? (Y/n)")
+print(réponse.lower())
+while réponse.lower() == "y" or réponse == "":
+    nouvelle_partie()
+    réponse = input("Rejouer ? (Y/n)")
+else:
+    exit()
 
 
 #plateau.generer_partie()
