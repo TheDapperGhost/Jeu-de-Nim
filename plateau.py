@@ -1,6 +1,3 @@
-
-
-
 def generer_partie() -> int:
     """Génère une nouvelle partie"""
     NbrAllumettes = int(input("Commencer la partie avec combien d'allumettes: "))
