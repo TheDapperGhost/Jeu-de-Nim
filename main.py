@@ -19,13 +19,15 @@ def nouvelle_partie() -> None:
         plateau.afficher_plateau(NbrAllumettes , ae)
         aae = joueur.jouer_coup()
         ae = ae + aae
-
-    print("joueur ", str(not joueur), " a gagné")
+    
+    if joueur:
+        print("Le joueur 2 a gagné")
+    else:
+        print("Le joueur 1 a gagné")
 
 nouvelle_partie()
 
 réponse = input("Rejouer ? (Y/n)")
-print(réponse.lower())
 while réponse.lower() == "y" or réponse == "":
     nouvelle_partie()
     réponse = input("Rejouer ? (Y/n)")
