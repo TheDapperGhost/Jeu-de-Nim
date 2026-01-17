@@ -18,7 +18,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.11'
+        python-version: '3.12'
 
     - name: Install dependencies
       run: |
@@ -39,8 +39,9 @@ jobs:
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: Jeu-de-Nim-exe
+        name: Jeu-de-Nim-exe-${{ github.run_number }}
         path: dist/Jeu de Nim.exe
+        retention-days: 30
 
     - name: Create/Update Release
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
@@ -49,7 +50,9 @@ jobs:
         artifacts: "dist/*.exe"
         tag: latest
         name: Latest Build
-        body: "Dernière version compilée de Jeu de Nim"
+        body: "Dernière version compilée de Jeu de Nim - Build ${{ github.run_number }}"
         makeLatest: true
         allowUpdates: true
+        removeArtifacts: true
+        replacesArtifacts: true
         token: ${{ secrets.GITHUB_TOKEN }}
