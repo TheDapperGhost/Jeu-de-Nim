@@ -13,3 +13,7 @@ venv/
 .env
 test.py
 .kiro/
+node_modules/
+package-lock.json
+package.json
+.vscode/mcp.json
