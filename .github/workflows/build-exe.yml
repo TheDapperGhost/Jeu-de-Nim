@@ -40,10 +40,14 @@ jobs:
         name: Jeu-de-Nim-exe
         path: dist/Jeu de Nim.exe
 
-    - name: Create Release
-      if: startsWith(github.ref, 'refs/tags/')
+    - name: Create/Update Release
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       uses: softprops/action-gh-release@v1
       with:
         files: dist/*.exe
+        tag_name: latest
+        name: Latest Build
+        body: "Dernière version compilée de Jeu de Nim"
+        make_latest: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
