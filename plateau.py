@@ -1,3 +1,4 @@
+from PIL import Image
 def generer_partie() -> int:
     """Génère une nouvelle partie"""
     NbrAllumettes = int(input("Commencer la partie avec combien d'allumettes: "))
@@ -13,4 +14,6 @@ def afficher_plateau(NbrAllumettes: int, aae: int) -> None:
     for n in range(aae):
         print(vide, end = "  ")
     for n in range(NbrAllumettes):
+        with Image.open("./allumette.ico") as img:
+            img.show()
         print(allumette, end = " ")

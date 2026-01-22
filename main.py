@@ -8,8 +8,8 @@ sound = vlc.MediaPlayer(url)
 sound.play() #erreur affichée mais n'est pas une erreur : Canard.mp3 n'est pas vide et le projet fonctionne.'''
 
 if os.name == 'nt' or os.name == 'dos':
-def clear() -> None:
-    os.system("cls")
+    def clear() -> None:
+        os.system("cls")
 else:
     def clear() -> None:
         os.system('clear')
