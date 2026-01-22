@@ -1,3 +1,6 @@
+from term_image.image import from_file
+image = from_file("allumette.ico")
+
 def generer_partie() -> int:
     """Génère une nouvelle partie"""
     NbrAllumettes = input("Commencer la partie avec combien d'allumettes: ")
