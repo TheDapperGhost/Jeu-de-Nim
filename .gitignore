@@ -11,7 +11,6 @@ build/
 .venv/
 venv/
 .env
-test.py
 .kiro/
 node_modules/
 package-lock.json
