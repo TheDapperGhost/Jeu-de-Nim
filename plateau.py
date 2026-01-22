@@ -1,20 +1,26 @@
 def generer_partie() -> int:
     """Génère une nouvelle partie"""
-    NbrAllumettes = int(input("Commencer la partie avec combien d'allumettes: "))
-    return NbrAllumettes
+    NbrAllumettes = input("Commencer la partie avec combien d'allumettes: ")
+    if str(NbrAllumettes).isdigit():
+        NbrAllumettes = int(NbrAllumettes)
+    else:
+        while str(NbrAllumettes).isdigit() is False :
+            print("Entrez un nombre valide d'allumettes !")
+            NbrAllumettes = input("Commencer la partie avec combien d'allumettes: ")
+    return int(NbrAllumettes)
 
 #from main import clear
 
 def afficher_plateau(NbrAllumettes: int, aae: int) -> None:
     """Affiche le plateau mis à jour"""
     vide = ""
-    allumette1 = "🔥"
-    allumette2 = "|"
+    allumette = " 🕯️ "
     #clear()
     for n in range(aae):
         print(vide, end = "  ")
     for n in range(NbrAllumettes):
-        print(allumette1, end = " ")
-    print("  ")
-    for n in range(NbrAllumettes):
-        print(allumette2, vide, end = " ")
+        '''
+        with Image.open("./allumette.ico") as img:
+            img.show()
+            '''
+        print(allumette, end = " ")

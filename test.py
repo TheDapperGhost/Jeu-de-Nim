@@ -33,7 +33,15 @@ p.terminate()'''
 import os
 
 print(os.name)
+'''
+
 
 from term_image.image import from_file
 image = from_file("allumette.ico")
 print(image, image , sep="")  # Affiche l'image dans le terminal
+image.draw()  # Affiche l'image dans le terminal
+'''
+from image import DrawImage
+
+image = DrawImage.from_file("./allumette.ico")
+image.draw_image()
