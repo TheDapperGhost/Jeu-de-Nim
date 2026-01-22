@@ -8,9 +8,13 @@ def generer_partie() -> int:
 def afficher_plateau(NbrAllumettes: int, aae: int) -> None:
     """Affiche le plateau mis à jour"""
     vide = ""
-    allumette = "🔥"
+    allumette1 = "🔥"
+    allumette2 = "|"
     #clear()
     for n in range(aae):
         print(vide, end = "  ")
     for n in range(NbrAllumettes):
-        print(allumette, end = " ")
+        print(allumette1, end = " ")
+    print("  ")
+    for n in range(NbrAllumettes):
+        print(allumette2, vide, end = " ")
