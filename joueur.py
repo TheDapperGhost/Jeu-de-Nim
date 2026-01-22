@@ -4,7 +4,7 @@ def jouer_coup() -> int:
     aae = 50
     while valider_coup(aae) is False:
         print("Entrez un nombre valide d'allumettes !")
-        input("Combien d'allumettes voulez-vous enlever (entre 1 et 3) ? : ")
+        aae = input("Combien d'allumettes voulez-vous enlever (entre 1 et 3) ? : ")
         if str(aae).isdigit():
             aae = int(aae)
         else:
