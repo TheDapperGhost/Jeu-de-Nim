@@ -2,7 +2,6 @@ import os
 import plateau
 import joueur
 
-
 if os.name == 'nt' or os.name == 'dos':
     def clear() -> None:
         os.system("cls")

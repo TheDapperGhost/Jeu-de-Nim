@@ -1,8 +1,11 @@
 from term_image.image import from_file
+from nava import play
+
 image = from_file("allumette.ico")
 
 def generer_partie() -> int:
     print(image)
+    sound_id = play("Canard.mp3", async_mode=True)
     """Génère une nouvelle partie"""
     NbrAllumettes = input("Commencer la partie avec combien d'allumettes: ")
     if str(NbrAllumettes).isdigit():
