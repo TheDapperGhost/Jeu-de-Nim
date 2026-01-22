@@ -1,11 +1,7 @@
 import os
 import plateau
 import joueur
-import vlc
 
-url = './Canard.mp3'
-sound = vlc.MediaPlayer(url)
-sound.play() #erreur affichée mais n'est pas une erreur : Canard.mp3 n'est pas vide et le projet fonctionne.
 
 if os.name == 'nt' or os.name == 'dos':
     def clear() -> None:
@@ -42,12 +38,3 @@ while réponse.lower() == "y" or réponse == "":
     réponse = input("Rejouer ? (Y/n)")
 else:
     exit()
-
-
-#plateau.generer_partie()
-#joueur1 = True
-
-#while not joueur.tester_victoire():
-#    aae : int = int(input("Combien d'allumettes voulez-vous enlever (entre 1 et 3) ? : "))
-#    joueur.jouer_coup(joueur, aae)
-#    joueur1 = not joueur1
