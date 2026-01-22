@@ -10,7 +10,12 @@ sound.play() #erreur affichée mais n'est pas une erreur : Canard.mp3 n'est pas 
 def clear() -> None:
     os.system("cls" if os.name in ("nt", "dos") else "clear")
     pass
-clear()
+try:
+    clear()
+except:
+    def clear() -> None:
+        os.system('clear')
+    clear
 
 def nouvelle_partie() -> None:
     """Lance une nouvelle partie"""
