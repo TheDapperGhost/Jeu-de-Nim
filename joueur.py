@@ -1,4 +1,4 @@
-#aae : allumettes à enlever
+#aae = allumettes à enlever
 def jouer_coup() -> int:
     """Demande au joueur de jouer son coup"""
     aae : int = int(input("Combien d'allumettes voulez-vous enlever (entre 1 et 3) ? : "))
