@@ -1,2 +1,3 @@
 python-vlc
 pillow
+term_image
