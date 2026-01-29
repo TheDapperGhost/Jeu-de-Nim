@@ -1,15 +1,15 @@
 #aae = allumettes à enlever
 def jouer_coup() -> int:
     """Demande au joueur de jouer son coup"""
-    aae = 50
-    while valider_coup(aae) is False:
-        print("Entrez un nombre valide d'allumettes !")
-        aae = input("Combien d'allumettes voulez-vous enlever (entre 1 et 3) ? : ")
-        if str(aae).isdigit():
-            aae = int(aae)
+    while True:
+        aae_input = input("Combien d'allumettes voulez-vous enlever (entre 1 et 3) ? : ")
+        if str(aae_input).isdigit():
+            aae = int(aae_input)
         else:
             aae = 50
-    return aae
+        if valider_coup(aae):
+            return aae
+        print("Entrez un nombre valide d'allumettes !")
     
 
 
