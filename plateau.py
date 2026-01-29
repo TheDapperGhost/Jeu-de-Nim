@@ -1,4 +1,4 @@
-from term_image.image import from_file
+from term-image.image import from_file
 
 image = from_file("allumette.ico")
 
