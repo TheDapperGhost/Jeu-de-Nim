@@ -22,4 +22,3 @@ def valider_coup(aae: int) -> bool:
 def tester_victoire(NbrAllumettes : int, aae: int) -> bool:
     """Teste si le coup résulte à une victoire"""
     return (NbrAllumettes-aae) <= 0
-
