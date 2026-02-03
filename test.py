@@ -41,7 +41,9 @@ image = from_file("allumette.ico")
 print(image, image , sep="")  # Affiche l'image dans le terminal
 image.draw()  # Affiche l'image dans le terminal
 '''
-from image import DrawImage
+#from image import DrawImage
 
-image = DrawImage.from_file("./allumette.ico")
-image.draw_image()
+#image = DrawImage.from_file("./allumette.ico")
+#image.draw_image()
+
+print("\ud83d\udd6f\ufe0f")
