@@ -4,9 +4,11 @@ import joueur
 
 if os.name == 'nt' or os.name == 'dos':
     def clear() -> None:
+        '''Efface l'écran.'''
         os.system("cls")
 else:
     def clear() -> None:
+        '''Efface l'écran.'''
         os.system('clear')
 
 clear()
