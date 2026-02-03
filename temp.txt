@@ -1,0 +1,38 @@
+Help on module joueur:
+
+NAME
+    joueur - #aae = allumettes à enlever
+
+FUNCTIONS
+    jouer_coup() -> int
+        Demande au joueur de jouer son coup
+    
+    tester_victoire(NbrAllumettes: int, aae: int) -> bool
+        Teste si le coup résulte à une victoire
+    
+    valider_coup(aae: int) -> bool
+        Vérifie si le coup joué est valide
+
+FILE
+    d:\0\()\home\prog\nsi\jeu-de-nim\joueur.py
+
+
+Help on module plateau:
+
+NAME
+    plateau
+
+FUNCTIONS
+    afficher_plateau(NbrAllumettes: int, aae: int) -> None
+        Affiche le plateau mis à jour
+    
+    generer_partie() -> int
+        Génère une nouvelle partie
+
+DATA
+    image = <BlockImage: source_type=FILE_PATH size=FIT is_animated=False>
+
+FILE
+    d:\0\()\home\prog\nsi\jeu-de-nim\plateau.py
+
+
